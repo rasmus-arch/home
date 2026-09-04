@@ -37,8 +37,12 @@
         <img src="../assets/img/favicon.svg" alt="" width="32" height="32">
         <span>Rasmus Gustafsson</span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
-        Meny
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Öppna meny">
+        <span class="hamburger" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
       </button>
       <nav class="main-nav" id="main-nav" aria-label="Huvudmeny">
         <ul>
@@ -55,6 +59,11 @@
     <section class="page-hero">
       <div class="container">
         <p class="breadcrumbs"><a href="../index.html">Hem</a> / <a href="../index.html#tjanster">Tjänster</a> / Webb &amp; kodning</p>
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13 5l-2 14" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
         <h1>Webbutveckling &amp; kundanpassade säljsystem</h1>
         <p class="section-lead">
           Jag bygger hemsidor och skräddarsydda säljsystem som är anpassade efter hur just ditt

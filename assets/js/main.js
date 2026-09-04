@@ -7,7 +7,9 @@
   if (toggle && nav) {
     toggle.addEventListener("click", function () {
       var isOpen = nav.classList.toggle("is-open");
+      toggle.classList.toggle("is-open", isOpen);
       toggle.setAttribute("aria-expanded", String(isOpen));
+      toggle.setAttribute("aria-label", isOpen ? "Stäng meny" : "Öppna meny");
     });
   }
 

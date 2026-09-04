@@ -81,6 +81,14 @@ a:focus-visible {
 .site-header {
   background: var(--color-primary);
   color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 6px 20px -14px rgba(0, 0, 0, 0.5);
+}
+
+section[id] {
+  scroll-margin-top: 88px;
 }
 
 .site-header .container {
@@ -115,13 +123,59 @@ a:focus-visible {
 
 .nav-toggle {
   display: none;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 6px;
+  border-radius: 8px;
   color: #fff;
-  padding: 0.4rem 0.6rem;
-  font-size: 1rem;
+  width: 42px;
+  height: 42px;
+  padding: 0;
   cursor: pointer;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 14px;
+}
+
+.hamburger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: #fff;
+  transition: transform 0.2s ease, opacity 0.2s ease, top 0.2s ease;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 6px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 12px;
+}
+
+.nav-toggle.is-open .hamburger span:nth-child(1) {
+  top: 6px;
+  transform: rotate(45deg);
+}
+
+.nav-toggle.is-open .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.is-open .hamburger span:nth-child(3) {
+  top: 6px;
+  transform: rotate(-45deg);
 }
 
 .main-nav ul {
@@ -234,6 +288,19 @@ a:focus-visible {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-soft) 100%);
   color: #fff;
   padding-block: 4.5rem;
+  overflow: hidden;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hero-media {
+  max-width: 380px;
+  margin-inline: auto;
 }
 
 .hero h1 {
@@ -254,6 +321,17 @@ a:focus-visible {
   flex-wrap: wrap;
 }
 
+@media (max-width: 860px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-media {
+    max-width: 230px;
+    margin-top: 0.5rem;
+  }
+}
+
 .page-hero {
   background: var(--color-bg-alt);
   padding-block: 3rem;
@@ -263,6 +341,23 @@ a:focus-visible {
 .page-hero h1 {
   margin: 0.4rem 0 0.75rem;
   font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+}
+
+.hero-badge {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.hero-badge svg {
+  width: 30px;
+  height: 30px;
+  color: #fff;
 }
 
 .breadcrumbs {
@@ -330,6 +425,12 @@ h2 {
   width: 42px;
   height: 42px;
   color: var(--color-accent);
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover .icon,
+.service-card:focus-visible .icon {
+  transform: scale(1.08) rotate(-2deg);
 }
 
 .service-card h3 {
@@ -592,4 +693,51 @@ form.contact-form {
 .status-page {
   text-align: center;
   padding-block: 5rem;
+}
+
+/* About page layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.about-grid .about-media img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 760px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid .about-media img {
+    max-width: 220px;
+    margin-inline: auto;
+  }
+}
+
+/* Tighter spacing on small screens */
+@media (max-width: 640px) {
+  .hero {
+    padding-block: 3rem;
+  }
+
+  section {
+    padding-block: 2.5rem;
+  }
+
+  .page-hero {
+    padding-block: 2.25rem;
+  }
+
+  .cta-band {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .service-card {
+    padding: 1.4rem;
+  }
 }
