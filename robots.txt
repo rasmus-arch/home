@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /tack.html
+
+Sitemap: https://rasmusgustafsson.com/sitemap.xml
