@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profil &amp; Arbetskläder – Statistik | Rasmus Gustafsson</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">
+        <img src="../assets/img/favicon.svg" alt="" width="32" height="32">
+        <span>Rasmus Gustafsson</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Öppna meny">
+        <span class="hamburger" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Huvudmeny">
+        <ul>
+          <li><a href="../index.html">Hem</a></li>
+          <li><a href="../index.html#tjanster">Tjänster</a></li>
+          <li><a href="../om.html">Om mig</a></li>
+          <li><a href="../kontakt.html" class="btn btn-outline">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumbs"><a href="../index.html">Hem</a> / Kunder / Profil &amp; Arbetskläder</p>
+        <h1>Profil &amp; Arbetskläder</h1>
+        <p class="section-lead">
+          Eskilstuna – statistik från Google Ads, Search Console och Analytics, samlat på ett ställe.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <!--
+          Byt ut src nedan mot din riktiga inbäddnings-URL från Looker Studio
+          (File → Embed report → Enable embedding → kopiera länken).
+          Se till att rapporten är delad enbart med kundens Google-konto
+          (Manage access → lägg till deras e-post som Viewer), inte "Alla med länken" –
+          det är den delningsinställningen som faktiskt skyddar datan här.
+        -->
+        <div class="dashboard-frame">
+          <iframe
+            src="REPLACE_WITH_LOOKER_STUDIO_EMBED_URL"
+            title="Statistik för Profil &amp; Arbetskläder"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <p class="form-note" style="margin-top:1.5rem;">
+          Statistiken hämtas direkt från Google och uppdateras automatiskt. Har du frågor om
+          siffrorna eller vill diskutera nästa steg? <a href="../kontakt.html">Hör av dig</a> eller
+          ring <a href="tel:+46791043083">079-104 30 83</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <ul>
+          <li><a href="../index.html">Hem</a></li>
+          <li><a href="../om.html">Om mig</a></li>
+          <li><a href="../kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <a href="tel:+46791043083">079-104 30 83</a>
+      </div>
+      <p class="footer-fine">© <span id="year">2026</span> Rasmus Gustafsson. Alla rättigheter förbehållna.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

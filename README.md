@@ -19,10 +19,12 @@ tjanster/
   annonsering.html
   tjanstebil.html
   kok.html
+kunder/
+  proarb.html                  Kunddashboard (Looker Studio-inbäddning), ej publikt listad
 assets/
   css/style.css                All styling, en fil
   js/main.js                   Mobilmeny + kontaktformulär (fetch + spamskydd)
-  img/                         Favicon (SVG) och OG-bild
+  img/                         Favicon (SVG), OG-bild och SVG-illustrationer
 robots.txt
 sitemap.xml
 CNAME                          Custom domain för GitHub Pages (ta bort om du inte kör Pages)
@@ -62,6 +64,39 @@ webbhotell (FTP, GitHub Pages, Netlify, Cloudflare Pages m.fl.).
    - Telefonnumret `079-104 30 83` är inbakat i alla sidfötter och på
      kontaktsidan – uppdatera på ett ställe i taget om det ändras
      (sök/ersätt över alla `.html`-filer).
+
+## Kunddashboards (`kunder/`)
+
+Varje kund kan få en egen sida som visar deras Google Ads, Search Console
+och Analytics-data via en inbäddad [Looker Studio](https://lookerstudio.google.com)-rapport.
+Sidorna är **inte** länkade från huvudmenyn eller sitemap.xml, har
+`<meta name="robots" content="noindex,nofollow">` och blockeras i
+`robots.txt` – men det som faktiskt skyddar kunddatan är Looker Studios
+egen delningsbehörighet, inte URL:ens hemlighet. Bygg alltid rapporten
+så här:
+
+1. Gå till https://lookerstudio.google.com, logga in med det Google-konto
+   som har åtkomst till kundens GA4-egendom, Search Console-egendom och
+   Google Ads-konto.
+2. **Create → Report**, lägg till datakällor via respektive
+   Google-koppling (Google Analytics, Search Console, Google Ads) och
+   bygg de diagram/sidor ni vill visa.
+3. **File → Share → Manage access** – lägg till kundens e-postadress
+   som Viewer. Använd **inte** "Anyone with the link" om datan är
+   känslig (annonsbudget, trafiksiffror) – det är den här inställningen
+   som avgör vem som faktiskt kan se rapporten.
+4. **File → Embed report → Enable embedding** – kopiera den genererade
+   embed-URL:en.
+5. Öppna `kunder/<kundnamn>.html` (kopiera `kunder/proarb.html` som mall
+   för nya kunder) och byt ut `REPLACE_WITH_LOOKER_STUDIO_EMBED_URL`
+   mot embed-URL:en i `<iframe src="...">`.
+6. Skicka den unika sid-länken (t.ex.
+   `https://rasmusgustafsson.com/kunder/proarb.html`) direkt till
+   kunden – dela den inte offentligt.
+
+**Ny kund:** duplicera `kunder/proarb.html`, uppdatera titel, rubriker
+och embed-URL. Lägg **inte** till sidan i `sitemap.xml` eller
+huvudmenyn.
 
 ## SEO
 
