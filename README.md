@@ -62,6 +62,13 @@ webbhotell (FTP, GitHub Pages, Netlify, Cloudflare Pages m.fl.).
    - `om.html` har en allmän text om dig – fyll gärna på med bakgrund,
      tidigare uppdrag eller specifika samarbeten (t.ex. vilket
      kökssortiment du representerar) om du vill vara mer specifik.
+   - `assets/img/rasmus-foto.jpg` är just nu en platshållarbild (ett
+     genererat "foto kommer"-kort) för porträttet på Om mig-sidan.
+     Ersätt filen med ditt riktiga foto – **samma filnamn och portratt-
+     format (ca 400×500, stående)** – så behövs ingen kodändring. Du
+     kan antingen committa den nya filen till repot, eller ladda upp
+     den direkt till samma sökväg på webbhotellet om du inte kör om
+     hela sajten via git.
    - Telefonnumret `079-104 30 83` är inbakat i alla sidfötter och på
      kontaktsidan – uppdatera på ett ställe i taget om det ändras
      (sök/ersätt över alla `.html`-filer).
