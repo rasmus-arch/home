@@ -2,8 +2,8 @@
 
 Statisk, beroendefri sajt (ren HTML/CSS/JS, inget byggsteg) för
 rasmusgustafsson.com. Täcker digitalisering, webbutveckling &
-kundanpassade säljsystem, annonsering, tjänstebilsrådgivning och
-köksförsäljning.
+kundanpassade säljsystem, annonsering, tjänstebilsrådgivning,
+köksförsäljning och drönarfoto.
 
 ## Struktur
 
@@ -19,6 +19,7 @@ tjanster/
   annonsering.html
   tjanstebil.html
   kok.html
+  dronarfoto.html
 kunder/
   proarb.html                  Kunddashboard (Looker Studio-inbäddning), ej publikt listad
 assets/
