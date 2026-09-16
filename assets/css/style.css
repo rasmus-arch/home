@@ -750,27 +750,23 @@ form.contact-form {
   padding: 4px;
 }
 
-/* About page layout */
-.about-grid {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 2.5rem;
-  align-items: start;
+/* About page photo (wide/landscape banner, reuses the photo-showcase look) */
+.about-photo {
+  margin: 0 0 2.5rem;
 }
 
-.about-grid .about-media img {
+.about-photo img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  border: 1px solid var(--color-border);
 }
 
-@media (max-width: 760px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-grid .about-media img {
-    max-width: 220px;
-    margin-inline: auto;
+@media (max-width: 640px) {
+  .about-photo img {
+    aspect-ratio: 4 / 3;
   }
 }
 
