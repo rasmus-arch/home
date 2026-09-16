@@ -71,9 +71,10 @@ webbhotell (FTP, GitHub Pages, Netlify, Cloudflare Pages m.fl.).
      den nya filen till repot, eller ladda upp den direkt till samma
      sökväg på webbhotellet om du inte kör om
      hela sajten via git.
-   - Telefonnumret `079-104 30 83` är inbakat i alla sidfötter och på
-     kontaktsidan – uppdatera på ett ställe i taget om det ändras
-     (sök/ersätt över alla `.html`-filer).
+   - Telefonnummer visas inte längre offentligt någonstans på sajten –
+     all kontakt går via formuläret på `kontakt.html`. Vill du visa ett
+     nummer igen senare, sök efter `tel:` i `.html`-filerna för att se
+     var det tidigare låg.
 
 ## Kunddashboards (`kunder/`)
 
