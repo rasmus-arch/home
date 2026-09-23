@@ -5,12 +5,20 @@ rasmusgustafsson.com. Täcker digitalisering, webbutveckling &
 kundanpassade säljsystem, annonsering, tjänstebilsrådgivning,
 köksförsäljning och drönarfoto.
 
+**Designsystem:** varm, sandfärgad "editorial" light mode. Display-font
+[Fraunces](https://fonts.google.com/specimen/Fraunces) (serif, rubriker)
++ [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
+(brödtext), laddade via Google Fonts i varje sidas `<head>`. Färgtokens
+och komponenter (tjänstelista, case-kort, capabilities-taggar,
+mörk footer) definieras i `assets/css/style.css`.
+
 ## Struktur
 
 ```
-index.html                     Startsida med tjänsteöversikt
+index.html                     Startsida: hero, tjänstelista, capabilities, case-teaser
+case.html                      Case studies (Hemsidor / Annonsering / Konsultuppdrag / Affärssystem)
 om.html                        Om mig
-kontakt.html                   Kontaktformulär + telefonnummer
+kontakt.html                   Kontaktformulär
 tack.html                      Tacksida efter skickat formulär (noindex)
 404.html                       Egen 404-sida
 tjanster/
@@ -24,8 +32,8 @@ kunder/
   proarb.html                  Kunddashboard (Looker Studio-inbäddning), ej publikt listad
 assets/
   css/style.css                All styling, en fil
-  js/main.js                   Mobilmeny + kontaktformulär (fetch + spamskydd)
-  img/                         Favicon (SVG), OG-bild och SVG-illustrationer
+  js/main.js                   Mobilmeny, kontaktformulär, magnetiska knappar, case-filter
+  img/                         Favicon (SVG), OG-bild, drönarfoto och foto-platshållare
 robots.txt
 sitemap.xml
 CNAME                          Custom domain för GitHub Pages (ta bort om du inte kör Pages)
@@ -34,20 +42,43 @@ CNAME                          Custom domain för GitHub Pages (ta bort om du in
 Ingen byggprocess krävs – filerna kan laddas upp direkt till valfritt
 webbhotell (FTP, GitHub Pages, Netlify, Cloudflare Pages m.fl.).
 
+## Google Analytics (GA4)
+
+GA4-mätid `G-65WKL1PCGL` är inklistrat i `<head>` på **alla** sidor
+(samma `gtag.js`-snippet överallt). Vill du byta mätid: sök och ersätt
+`G-65WKL1PCGL` över samtliga `.html`-filer.
+
+## Case studies (`case.html`)
+
+Case-sidan har fyra platshållarkort (ett per kategori: Hemsidor,
+Annonsering, Konsultuppdrag, Skräddarsydda affärssystem) med rubriken
+"Case tillkommer" och fälten "Fylls i inom kort". De är medvetet
+skrivna så att de läser som "kommer snart" och inte som trasiga
+platshållare, men byt ut dem mot riktiga uppdrag så snart du kan —
+en sajt med fyra tomma case i flera veckor ger fel intryck.
+
+**Så fyller du i ett case**, i `case.html`:
+1. Hitta rätt `<article class="case-card" ...>`-block (sök på
+   kategorinamnet, t.ex. `id="hemsidor"`).
+2. Byt `<h3>Case tillkommer</h3>` mot en riktig rubrik, t.ex.
+   "Proarb — ny hemsida och kunddashboard".
+3. Byt de tre `<li>`-raderna (Utmaning / Lösning / Resultat) mot
+   riktig text. Skriv bara sådant som faktiskt hänt — inga
+   uppskattade eller påhittade resultatsiffror.
+4. Byt bildplatshållaren (`<div class="case-media-empty">...`) mot en
+   `<img>` av en skärmdump/foto från projektet, och lägg till klassen
+   `has-image` på den omgivande `<div class="case-media">`.
+5. Upprepa för övriga kort. Fler case än fyra? Kopiera ett helt
+   `<article class="case-card">`-block, ge det ett unikt `id`/`data-category`
+   och lägg till en matchande `data-filter`-knapp om det är en ny kategori.
+
 ## Innan sajten går skarpt – checklista
 
-1. **Kontaktformulär – Web3Forms-nyckel.**
-   Formuläret på `kontakt.html` skickas via [Web3Forms](https://web3forms.com)
-   (gratis, ingen egen server behövs, inbyggt spamskydd). Just nu pekar det
-   mot en platshållarnyckel. Gör så här:
-   1. Gå till https://web3forms.com och skapa en gratis "Access Key" med
-      din e-postadress (den mottagande adressen visas **aldrig** i
-      sidkällan).
-   2. Öppna `kontakt.html` och byt ut
-      `REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY` mot din riktiga nyckel.
-   3. Klart – formuläret har redan ett dolt honeypot-fält samt ett
-      tidsbaserat skydd (blockerar inskick som sker orimligt snabbt) i
-      `assets/js/main.js`, utöver Web3Forms egna spamfilter.
+1. **Kontaktformulär – Web3Forms.** ✅ Klart. Formuläret på `kontakt.html`
+   skickas via [Web3Forms](https://web3forms.com) med en riktig access
+   key redan inklistrad. Det har också ett dolt honeypot-fält och ett
+   tidsbaserat skydd (blockerar inskick som sker orimligt snabbt) i
+   `assets/js/main.js`, utöver Web3Forms egna spamfilter.
 
 2. **Domän / hosting.**
    - **GitHub Pages:** aktivera Pages på detta repo (Settings → Pages →

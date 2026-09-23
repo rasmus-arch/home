@@ -3,16 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rasmus Gustafsson – Digitalisering, webb, sälj &amp; rådgivning</title>
-  <meta name="description" content="Rasmus Gustafsson hjälper företag och privatpersoner med digitalisering, webbutveckling, kundanpassade säljsystem, annonsering, tjänstebilsrådgivning, köksförsäljning och drönarfoto.">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-65WKL1PCGL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-65WKL1PCGL');
+  </script>
+
+  <title>Rasmus Gustafsson — Digital utveckling utan mellanhänder</title>
+  <meta name="description" content="Rasmus Gustafsson hjälper mindre och medelstora företag att digitalisera, synas rätt och sälja mer — webbplatser, säljsystem, annonsering, rådgivning, kök och drönarfoto, en kontaktperson genom hela uppdraget.">
   <link rel="canonical" href="https://rasmusgustafsson.com/">
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Rasmus Gustafsson">
-  <meta property="og:title" content="Rasmus Gustafsson – Digitalisering, webb, sälj &amp; rådgivning">
-  <meta property="og:description" content="Digitalisering, webbutveckling, kundanpassade säljsystem, annonsering, tjänstebilsrådgivning, köksförsäljning och drönarfoto – samlat på ett ställe.">
+  <meta property="og:title" content="Rasmus Gustafsson — Digital utveckling utan mellanhänder">
+  <meta property="og:description" content="Webbplatser, säljsystem, annonsering, rådgivning, kök och drönarfoto — en kontaktperson genom hela uppdraget.">
   <meta property="og:url" content="https://rasmusgustafsson.com/">
   <meta property="og:image" content="https://rasmusgustafsson.com/assets/img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -36,28 +48,27 @@
   }
   </script>
 </head>
-<body>
+<body id="top">
   <a class="skip-link" href="#main">Hoppa till innehåll</a>
 
   <header class="site-header">
     <div class="container">
       <a class="brand" href="index.html">
-        <img src="assets/img/favicon.svg" alt="" width="32" height="32">
+        <img src="assets/img/favicon.svg" alt="" width="30" height="30">
         <span>Rasmus Gustafsson</span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Öppna meny">
         <span class="hamburger" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </span>
       </button>
       <nav class="main-nav" id="main-nav" aria-label="Huvudmeny">
         <ul>
           <li><a href="index.html" aria-current="page">Hem</a></li>
           <li><a href="#tjanster">Tjänster</a></li>
+          <li><a href="case.html">Case</a></li>
           <li><a href="om.html">Om mig</a></li>
-          <li><a href="kontakt.html" class="btn btn-outline">Kontakt</a></li>
+          <li><a href="kontakt.html" class="btn btn-outline">Starta ett projekt</a></li>
         </ul>
       </nav>
     </div>
@@ -65,124 +76,178 @@
 
   <main id="main">
     <section class="hero">
-      <div class="container hero-inner">
-        <div>
-          <h1>Rasmus Gustafsson</h1>
+      <div class="container">
+        <div class="lead-copy">
+          <span class="eyebrow">En kontaktperson. Flera problem lösta.</span>
+          <h1>Digital utveckling utan mellanhänder — <em>från idé till driftsatt</em>.</h1>
           <p class="lead">
-            En kontaktyta för flera av dina behov – digitalisering, webb, sälj och rådgivning,
-            samlat på ett ställe. Praktiskt förhållningssätt, en kontaktperson genom hela uppdraget.
+            Jag hjälper mindre och medelstora företag att digitalisera, synas rätt och sälja mer —
+            utan att du behöver jonglera fem olika leverantörer för att komma dit. En rad kod, en
+            annonskampanj eller ett helt säljsystem: jag är med hela vägen, och jag levererar det jag
+            faktiskt sagt att jag ska.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="kontakt.html">Kontakta mig</a>
-            <a class="btn btn-outline" href="#tjanster">Se vad jag hjälper till med</a>
+            <a class="btn btn-primary" href="kontakt.html">Starta ett projekt <span class="arrow">→</span></a>
+            <a class="btn btn-outline" href="case.html">Se utvalda case <span class="arrow">→</span></a>
           </div>
         </div>
-        <div class="hero-media">
-          <img src="assets/img/hero-illustration.svg" alt="" width="440" height="440" loading="eager">
+
+        <figure class="hero-photo">
+          <img src="assets/img/dronarfoto-exempel.jpg" alt="Flygfoto över en sjö, en väg och en husbil i fjällandskap" width="2347" height="1320" loading="eager">
+        </figure>
+        <div class="hero-photo-caption">
+          <span>Ett eget flygfoto — samma blick för detaljer och helhet som går in i varje uppdrag.</span>
+          <span>Drönarfoto, Rasmus Gustafsson</span>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="rule-top">
       <div class="container">
-        <h2>Vad jag gör</h2>
-        <p class="section-lead">
-          Jag har byggt min verksamhet kring att lösa praktiska problem för företag och privatpersoner –
-          oavsett om det handlar om att digitalisera arbetssätt, bygga en ny hemsida eller ett kundanpassat
-          säljsystem, få ut rätt budskap i annonser, hitta rätt tjänstebil, hitta rätt kök eller fånga en
-          fastighet eller ett projekt från luften med drönare. Gemensamt är ett konkret förhållningssätt och
-          att jag själv är med hela vägen, från idé till leverans.
+        <p class="pull">
+          Jag gillar sällan snygga slides. Jag gillar saker som fungerar — en hemsida som faktiskt
+          konverterar, ett säljsystem säljarna faktiskt använder, en annonsbudget som går dit den gör
+          nytta.
         </p>
       </div>
     </section>
 
-    <section class="alt" id="tjanster">
+    <section class="rule-top" id="tjanster">
       <div class="container">
-        <h2>Tjänster</h2>
-        <p class="section-lead">Sex områden jag hjälper till inom – klicka för att läsa mer om varje del.</p>
+        <div class="section-head">
+          <span class="eyebrow">Tjänster</span>
+          <h2 class="section-title">Sex sätt jag kan hjälpa till på</h2>
+        </div>
 
-        <div class="service-grid">
-          <a class="service-card" href="tjanster/digitalisering.html">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path d="M4 6h16M4 12h16M4 18h10" stroke-linecap="round"/>
-            </svg>
-            <h3>Digitalisering</h3>
-            <p>Hjälp att gå från manuella rutiner till digitala arbetssätt som faktiskt används i vardagen.</p>
-            <span class="card-link">Läs mer →</span>
+        <div class="service-index">
+          <a class="service-row" href="tjanster/digitalisering.html">
+            <span class="index">01</span>
+            <span class="title-group">
+              <h3>Digitalisering</h3>
+              <p>Manuella rutiner blir digitala arbetssätt som faktiskt används i vardagen.</p>
+            </span>
+            <span class="arrow">→</span>
           </a>
-
-          <a class="service-card" href="tjanster/webb-och-kodning.html">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13 5l-2 14" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <h3>Webb &amp; kodning</h3>
-            <p>Nya hemsidor och kundanpassade säljsystem, byggda för hur just ditt företag arbetar.</p>
-            <span class="card-link">Läs mer →</span>
+          <a class="service-row" href="tjanster/webb-och-kodning.html">
+            <span class="index">02</span>
+            <span class="title-group">
+              <h3>Webb &amp; kodning</h3>
+              <p>Nya hemsidor och kundanpassade säljsystem, byggda för hur ditt företag faktiskt arbetar.</p>
+            </span>
+            <span class="arrow">→</span>
           </a>
-
-          <a class="service-card" href="tjanster/annonsering.html">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path d="M3 11v2a2 2 0 002 2h1l3 4V5L6 9H5a2 2 0 00-2 2zM15 8a4 4 0 010 8M18 5a8 8 0 010 14" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <h3>Annonsering</h3>
-            <p>Struktur och uppföljning av annonsering så att budgeten går dit den gör mest nytta.</p>
-            <span class="card-link">Läs mer →</span>
+          <a class="service-row" href="tjanster/annonsering.html">
+            <span class="index">03</span>
+            <span class="title-group">
+              <h3>Annonsering</h3>
+              <p>Struktur och uppföljning så att budgeten går dit den gör mest nytta.</p>
+            </span>
+            <span class="arrow">→</span>
           </a>
-
-          <a class="service-card" href="tjanster/tjanstebil.html">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path d="M4 16l1.5-5.5A2 2 0 017.4 9h9.2a2 2 0 011.9 1.5L20 16M4 16h16M4 16v2.5a1 1 0 001 1h1a1 1 0 001-1V16M17 16v2.5a1 1 0 001 1h1a1 1 0 001-1V16" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="7.5" cy="16" r="0.4" fill="currentColor"/>
-              <circle cx="16.5" cy="16" r="0.4" fill="currentColor"/>
-            </svg>
-            <h3>Tjänstebilsrådgivning</h3>
-            <p>Rätt tjänstebil utifrån verksamhetens faktiska behov, körmönster och kostnadsbild.</p>
-            <span class="card-link">Läs mer →</span>
+          <a class="service-row" href="tjanster/tjanstebil.html">
+            <span class="index">04</span>
+            <span class="title-group">
+              <h3>Tjänstebilsrådgivning</h3>
+              <p>Rätt bil utifrån verksamhetens faktiska behov, körmönster och kostnadsbild.</p>
+            </span>
+            <span class="arrow">→</span>
           </a>
-
-          <a class="service-card" href="tjanster/kok.html">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path d="M4 9h16M6 9V6a2 2 0 012-2h8a2 2 0 012 2v3M6 9v11h12V9" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M9 13v4M12 13v4M15 13v4" stroke-linecap="round"/>
-            </svg>
-            <h3>Kök</h3>
-            <p>Personlig rådgivning och försäljning av kök – från planlösning till helhetslösning.</p>
-            <span class="card-link">Läs mer →</span>
+          <a class="service-row" href="tjanster/kok.html">
+            <span class="index">05</span>
+            <span class="title-group">
+              <h3>Kök</h3>
+              <p>Personlig rådgivning och försäljning — från planlösning till helhetslösning.</p>
+            </span>
+            <span class="arrow">→</span>
           </a>
-
-          <a class="service-card" href="tjanster/dronarfoto.html">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path d="M12 12L5 5M12 12L19 5M12 12L5 19M12 12L19 19" stroke-linecap="round"/>
-              <rect x="9.3" y="9.3" width="5.4" height="5.4" rx="1.2"/>
-              <circle cx="5" cy="5" r="2"/>
-              <circle cx="19" cy="5" r="2"/>
-              <circle cx="5" cy="19" r="2"/>
-              <circle cx="19" cy="19" r="2"/>
-              <path d="M12 14.7v2.8" stroke-linecap="round"/>
-              <circle cx="12" cy="18.3" r="1" fill="currentColor" stroke="none"/>
-            </svg>
-            <h3>Drönarfoto</h3>
-            <p>Flygfoto och film som ger nya perspektiv på fastigheter, projekt och verksamheter.</p>
-            <span class="card-link">Läs mer →</span>
+          <a class="service-row" href="tjanster/dronarfoto.html">
+            <span class="index">06</span>
+            <span class="title-group">
+              <h3>Drönarfoto</h3>
+              <p>Flygfoto och film som ger nya perspektiv på fastigheter, projekt och verksamheter.</p>
+            </span>
+            <span class="arrow">→</span>
           </a>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="rule-top bg-raised">
       <div class="container">
-        <h2>Varför höra av sig till mig</h2>
-        <ul class="feature-list">
-          <li>Ett kontaktnummer för flera olika behov – slipp leta upp en ny leverantör för varje delfråga.</li>
-          <li>Praktiskt och konkret, utan onödiga mellansteg eller krångel.</li>
-          <li>Van vid att snabbt sätta mig in i nya branscher och verksamheter.</li>
-        </ul>
+        <div class="section-head">
+          <span class="eyebrow">Kompetens</span>
+          <h2 class="section-title">Det jag bygger, och vad jag bygger det med</h2>
+        </div>
+        <div class="capabilities-grid">
+          <div class="capabilities-group">
+            <h3>Det jag bygger bäst</h3>
+            <ul class="tag-list">
+              <li>Skräddarsydda webbplatser</li>
+              <li>Säljsystem &amp; interna verktyg</li>
+              <li>Digitalisering av manuella flöden</li>
+              <li>Integrationer mellan befintliga system</li>
+              <li>Rådgivning där tekniskt och kommersiellt möts</li>
+            </ul>
+          </div>
+          <div class="capabilities-group">
+            <h3>Verktyg &amp; ekosystem</h3>
+            <ul class="tag-list">
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>Node.js &amp; Express</li>
+              <li>MySQL / MariaDB</li>
+              <li>Vite</li>
+              <li>Tailwind CSS</li>
+              <li>Google Ads</li>
+              <li>Search Console</li>
+              <li>Looker Studio</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="rule-top">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Utvalda case</span>
+          <h2 class="section-title">Fyra typer av uppdrag jag tar mig an</h2>
+          <p class="section-lead" style="margin-top:1rem;">
+            Case-sidan samlar konkreta exempel: utmaningen, lösningen och vad det faktiskt gav.
+            Byggs på löpande — här är kategorierna att börja i.
+          </p>
+        </div>
+        <div class="capabilities-grid">
+          <a class="service-row is-compact" href="case.html#hemsidor">
+            <span class="title-group"><h3>Hemsidor</h3></span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="service-row is-compact" href="case.html#annonsering">
+            <span class="title-group"><h3>Annonsering</h3></span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="service-row is-compact" href="case.html#konsultuppdrag">
+            <span class="title-group"><h3>Konsultuppdrag</h3></span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="service-row is-compact" href="case.html#affarssystem">
+            <span class="title-group"><h3>Skräddarsydda affärssystem</h3></span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <p style="margin-top:2.5rem;">
+          <a class="btn btn-primary" href="case.html">Se alla case <span class="arrow">→</span></a>
+        </p>
+      </div>
+    </section>
+
+    <section class="rule-top">
+      <div class="container">
         <div class="cta-band">
-          <h2>Har du ett behov som inte riktigt passar in i en färdig mall?</h2>
-          <p>Hör av dig – oddsen är goda att jag kan hjälpa till, eller peka dig i rätt riktning.</p>
-          <p style="margin-top:1.5rem;">
-            <a class="btn btn-primary" href="kontakt.html">Kontakta mig</a>
+          <h2>Har du ett projekt som inte riktigt passar in i en färdig mall?</h2>
+          <p>Hör av dig — oddsen är goda att jag kan hjälpa till, eller peka dig i rätt riktning.</p>
+          <p style="margin-top:1.75rem;">
+            <a class="btn btn-invert" href="kontakt.html">Starta ett projekt <span class="arrow">→</span></a>
           </p>
         </div>
       </div>
@@ -191,20 +256,37 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-links">
-        <ul>
-          <li><a href="index.html">Hem</a></li>
-          <li><a href="om.html">Om mig</a></li>
-          <li><a href="tjanster/digitalisering.html">Digitalisering</a></li>
-          <li><a href="tjanster/webb-och-kodning.html">Webb &amp; kodning</a></li>
-          <li><a href="tjanster/annonsering.html">Annonsering</a></li>
-          <li><a href="tjanster/tjanstebil.html">Tjänstebil</a></li>
-          <li><a href="tjanster/kok.html">Kök</a></li>
-          <li><a href="tjanster/dronarfoto.html">Drönarfoto</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">Rasmus Gustafsson</div>
+          <p class="footer-brand-note">
+            Digitalisering, webb, sälj och rådgivning — en kontaktyta för flera av dina behov.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Tjänster</h4>
+          <ul>
+            <li><a href="tjanster/digitalisering.html">Digitalisering</a></li>
+            <li><a href="tjanster/webb-och-kodning.html">Webb &amp; kodning</a></li>
+            <li><a href="tjanster/annonsering.html">Annonsering</a></li>
+            <li><a href="tjanster/tjanstebil.html">Tjänstebil</a></li>
+            <li><a href="tjanster/kok.html">Kök</a></li>
+            <li><a href="tjanster/dronarfoto.html">Drönarfoto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Sajt</h4>
+          <ul>
+            <li><a href="om.html">Om mig</a></li>
+            <li><a href="case.html">Case</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
       </div>
-      <p class="footer-fine">© <span id="year">2026</span> Rasmus Gustafsson. Alla rättigheter förbehållna.</p>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Rasmus Gustafsson</span>
+        <a href="#top">Till toppen ↑</a>
+      </div>
     </div>
   </footer>
 

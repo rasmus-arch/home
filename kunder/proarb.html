@@ -3,33 +3,44 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-65WKL1PCGL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-65WKL1PCGL');
+  </script>
+
   <title>Profil &amp; Arbetskläder – Statistik | Rasmus Gustafsson</title>
   <meta name="robots" content="noindex,nofollow">
   <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+<body id="top">
   <a class="skip-link" href="#main">Hoppa till innehåll</a>
 
   <header class="site-header">
     <div class="container">
       <a class="brand" href="../index.html">
-        <img src="../assets/img/favicon.svg" alt="" width="32" height="32">
+        <img src="../assets/img/favicon.svg" alt="" width="30" height="30">
         <span>Rasmus Gustafsson</span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Öppna meny">
         <span class="hamburger" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </span>
       </button>
       <nav class="main-nav" id="main-nav" aria-label="Huvudmeny">
         <ul>
           <li><a href="../index.html">Hem</a></li>
           <li><a href="../index.html#tjanster">Tjänster</a></li>
+          <li><a href="../case.html">Case</a></li>
           <li><a href="../om.html">Om mig</a></li>
-          <li><a href="../kontakt.html" class="btn btn-outline">Kontakt</a></li>
+          <li><a href="../kontakt.html" class="btn btn-outline">Starta ett projekt</a></li>
         </ul>
       </nav>
     </div>
@@ -39,9 +50,10 @@
     <section class="page-hero">
       <div class="container">
         <p class="breadcrumbs"><a href="../index.html">Hem</a> / Kunder / Profil &amp; Arbetskläder</p>
+        <span class="eyebrow">Kunddashboard</span>
         <h1>Profil &amp; Arbetskläder</h1>
         <p class="section-lead">
-          Eskilstuna – statistik från Google Ads, Search Console och Analytics, samlat på ett ställe.
+          Eskilstuna — statistik från Google Ads, Search Console och Analytics, samlat på ett ställe.
         </p>
       </div>
     </section>
@@ -73,14 +85,18 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-links">
-        <ul>
-          <li><a href="../index.html">Hem</a></li>
-          <li><a href="../om.html">Om mig</a></li>
-          <li><a href="../kontakt.html">Kontakt</a></li>
-        </ul>
+      <div class="footer-top" style="grid-template-columns: 1fr;">
+        <div>
+          <div class="footer-brand">Rasmus Gustafsson</div>
+          <p class="footer-brand-note">
+            Digitalisering, webb, sälj och rådgivning — en kontaktyta för flera av dina behov.
+          </p>
+        </div>
       </div>
-      <p class="footer-fine">© <span id="year">2026</span> Rasmus Gustafsson. Alla rättigheter förbehållna.</p>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Rasmus Gustafsson</span>
+        <a href="#top">Till toppen ↑</a>
+      </div>
     </div>
   </footer>
 
