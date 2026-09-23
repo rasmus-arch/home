@@ -1,16 +1,23 @@
-# rasmusgustafsson.com
+# rasmusgustafsson.com — Digitalbolaget
 
-Statisk, beroendefri sajt (ren HTML/CSS/JS, inget byggsteg) för
-rasmusgustafsson.com. Täcker digitalisering, webbutveckling &
+Statisk, beroendefri sajt (ren HTML/CSS/JS, inget byggsteg) på domänen
+rasmusgustafsson.com för **Digitalbolaget**, som drivs av Rasmus
+Gustafsson i Eskilstuna. Täcker digitalisering, webbutveckling &
 kundanpassade säljsystem, annonsering, tjänstebilsrådgivning,
 köksförsäljning och drönarfoto.
 
-**Designsystem:** varm, sandfärgad "editorial" light mode. Display-font
-[Fraunces](https://fonts.google.com/specimen/Fraunces) (serif, rubriker)
-+ [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
-(brödtext), laddade via Google Fonts i varje sidas `<head>`. Färgtokens
-och komponenter (tjänstelista, case-kort, capabilities-taggar,
-mörk footer) definieras i `assets/css/style.css`.
+Bolagsnamnet **Digitalbolaget** är den synliga brandingen överallt
+(logga, sidtitlar, footer, meta/JSON-LD). Rasmus Gustafssons namn finns
+kvar bara i bio-texten på `om.html` — där är han avsändaren, annars är
+det Digitalbolaget som pratar ("vi").
+
+**Designsystem:** kall, teknisk light mode. Display-font
+[Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
+(rubriker) + [Inter](https://fonts.google.com/specimen/Inter)
+(brödtext) + [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono)
+(eyebrows, tjänsteindex, taggar), laddade via Google Fonts i varje
+sidas `<head>`. Färgtokens och komponenter (tjänstelista, case-kort,
+capabilities-taggar, mörk footer) definieras i `assets/css/style.css`.
 
 ## Struktur
 
