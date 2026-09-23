@@ -31,6 +31,8 @@ uppdateras — ingen kodändring behövs så länge filnamnen är desamma.
 
 ```
 index.html                     Startsida: hero, tjänstelista, capabilities, case-teaser
+webbyra-eskilstuna.html        SEO-landningssida: "webbyrå eskilstuna"
+hemsida-eskilstuna.html        SEO-landningssida: "hemsida eskilstuna"
 case.html                      Case studies (Hemsidor / Annonsering / Konsultuppdrag / Affärssystem)
 om.html                        Om mig
 kontakt.html                   Kontaktformulär
@@ -161,13 +163,66 @@ huvudmenyn.
   `<link rel="canonical">`.
 - Open Graph- och Twitter-metadata pekar mot `assets/img/og-image.png`
   (1200×630) för fina länkförhandsvisningar i sociala medier.
-- JSON-LD strukturerad data: `ProfessionalService` på startsidan,
-  `Service` på varje tjänstesida.
+- JSON-LD strukturerad data: `ProfessionalService`/`LocalBusiness` på
+  startsidan och på `webbyra-eskilstuna.html`, `Service` på varje
+  tjänstesida och på `hemsida-eskilstuna.html`, samt `FAQPage` på de
+  två Eskilstuna-landningssidorna (ger möjlighet till FAQ-utfall i
+  Google-sökresultat).
 - `sitemap.xml` listar alla riktiga sidor och `robots.txt` pekar mot
   den. Uppdatera `<lastmod>` i sitemap.xml om du redigerar en sida
   längre fram.
 - Semantisk HTML (rubrikhierarki, `<nav>`, `<main>`, brödsmulor) och en
   "skip to content"-länk för tillgänglighet.
+
+### Sökordsstrategi — underlag
+
+Prioriterade sökfraser (huvudmål, enligt önskemål): **"webbyrå
+eskilstuna"** och **"hemsida eskilstuna"**. Vi har inte tillgång till
+en riktig sökordsverktygsdata (Search Console/Keyword Planner) i den
+här miljön — listan nedan är byggd på sökintention och normala
+mönster för lokala tjänsteföretag, inte uppmätta volymer. Koppla in
+Search Console så snart sajten är skarp och använd de faktiska
+sökfraserna därifrån för att finjustera prioriteringen.
+
+**Sida: `webbyra-eskilstuna.html`** (bred, "vem ska jag anlita"-intention)
+- webbyrå eskilstuna *(primär)*
+- digital byrå eskilstuna
+- webbutvecklare eskilstuna
+- it-konsult eskilstuna
+- webbyrå södermanland
+
+**Sida: `hemsida-eskilstuna.html`** (smal, transaktionell "jag vill
+beställa en hemsida"-intention — hålls medvetet skild från sidan
+ovan för att inte konkurrera om samma sökning/klick)
+- hemsida eskilstuna *(primär)*
+- ny hemsida eskilstuna
+- hemsida till företag eskilstuna
+- billig hemsida eskilstuna
+- bygga hemsida eskilstuna
+
+**Redan täckt av befintliga tjänstesidor** (metadata/JSON-LD/brödtext
+uppdaterades i ett tidigare steg) — bevaka dessa i Search Console
+innan ni bygger fler dedikerade sidor, så att ni inte skapar tunt,
+duplicerat innehåll:
+- tjanster/annonsering.html → "annonsbyrå eskilstuna", "google ads eskilstuna"
+- tjanster/digitalisering.html → "digitalisering eskilstuna"
+- tjanster/tjanstebil.html → "tjänstebilsrådgivning eskilstuna"
+- tjanster/kok.html → "köksförsäljning eskilstuna"
+- tjanster/dronarfoto.html → "drönarfoto eskilstuna"
+
+**Geografisk räckvidd.** Ni jobbar i hela Sverige men vill fokusera på
+Eskilstuna-området — därför nämner de två nya sidorna samt
+startsidans JSON-LD (`areaServed`) uttryckligen Torshälla, Strängnäs,
+Flen och Katrineholm som närliggande orter, utan att var och en av
+dem får en egen tunn landningssida. Om Search Console längre fram
+visar tydlig sökvolym för en specifik grannort (t.ex. "webbyrå
+torshälla") är det läge att överväga en egen sida för den frasen då.
+
+**Internlänkning.** Båda de nya sidorna länkas från: startsidans
+tjänstesektion, `tjanster/webb-och-kodning.html` (mest relaterade
+tjänstesidan) samt footern på samtliga huvudsidor — det hjälper
+Google hitta och rangordna sidorna, och länkar sökintentionerna till
+varandra.
 
 ## Lokal förhandsgranskning
 
