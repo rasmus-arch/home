@@ -4,23 +4,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap");
 
 :root {
-  --color-bg: #fbfbfd;
+  --color-bg: #fafafa;
   --color-bg-raised: #ffffff;
-  --color-bg-alt: #f1f2f8;
-  --color-ink: #0f121a;
-  --color-ink-soft: #4b5163;
-  --color-ink-faint: #868da0;
+  --color-bg-alt: #f1f1ee;
+  --color-ink: #18181b;
+  --color-ink-soft: #52525b;
+  --color-ink-faint: #8a8a94;
   --color-accent: #0a9f8b;
   --color-accent-soft: #4dbfae;
-  --color-line: rgba(15, 18, 26, 0.1);
-  --color-line-strong: rgba(15, 18, 26, 0.2);
-  --color-invert-bg: #0f121a;
-  --color-invert-text: #fbfbfd;
-  --color-invert-line: rgba(251, 251, 253, 0.14);
-  --radius: 8px;
-  --radius-lg: 14px;
-  --max-width: 1180px;
-  --shadow: 0 20px 45px -28px rgba(15, 18, 26, 0.35);
+  --color-line: rgba(24, 24, 27, 0.1);
+  --color-line-strong: rgba(24, 24, 27, 0.18);
+  --color-invert-bg: #0f0f11;
+  --color-invert-text: #fafafa;
+  --color-invert-line: rgba(250, 250, 250, 0.14);
+  --radius: 10px;
+  --radius-lg: 24px;
+  --max-width: 1200px;
+  --shadow: 0 30px 60px -30px rgba(24, 24, 27, 0.25);
   --font-display: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -40,7 +40,7 @@ body {
   background: var(--color-bg);
   color: var(--color-ink);
   font-family: var(--font-body);
-  line-height: 1.65;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   position: relative;
 }
@@ -74,28 +74,28 @@ a:focus-visible {
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 600;
-  letter-spacing: -0.015em;
-  line-height: 1.12;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
   margin: 0;
 }
 
 .eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-accent);
 }
 
 .eyebrow::before {
-  content: "";
-  width: 22px;
-  height: 1px;
-  background: var(--color-accent);
+  content: "[ ";
+}
+
+.eyebrow::after {
+  content: " ]";
 }
 
 /* Skip link */
@@ -303,16 +303,45 @@ h1, h2, h3, h4 {
 
 /* Hero */
 .hero {
-  padding-block: 5.5rem 3.5rem;
+  padding-block: 6rem 5rem;
 }
 
-.hero .lead-copy {
-  max-width: 46ch;
+.hero-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-media {
+  min-width: 0;
+  width: 100%;
+}
+
+@media (min-width: 960px) {
+  .hero-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 3rem;
+  }
+
+  .hero-copy {
+    grid-column: span 7;
+  }
+
+  .hero-media {
+    grid-column: span 5;
+  }
 }
 
 .hero h1 {
-  font-size: clamp(2.4rem, 5.4vw, 4.2rem);
-  margin: 0.9rem 0 1.4rem;
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  margin: 1.1rem 0 1.5rem;
+  max-width: 16ch;
 }
 
 .hero h1 em {
@@ -323,8 +352,8 @@ h1, h2, h3, h4 {
 .hero .lead {
   font-size: 1.2rem;
   color: var(--color-ink-soft);
-  max-width: 48ch;
-  margin: 0 0 2.25rem;
+  max-width: 46ch;
+  margin: 0 0 2.5rem;
 }
 
 .hero-actions {
@@ -333,34 +362,30 @@ h1, h2, h3, h4 {
   flex-wrap: wrap;
 }
 
-.hero-photo {
-  margin-top: 3.25rem;
+.hero-image {
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--color-line);
   box-shadow: var(--shadow);
 }
 
-.hero-photo img {
+.hero-image img {
   width: 100%;
-  aspect-ratio: 21 / 9;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
+  display: block;
 }
 
-@media (max-width: 700px) {
-  .hero-photo img {
-    aspect-ratio: 4 / 3;
+@media (max-width: 959px) {
+  .hero-image img {
+    aspect-ratio: 16 / 9;
   }
 }
 
-.hero-photo-caption {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+.hero-image-caption {
+  margin-top: 0.85rem;
   font-size: 0.85rem;
   color: var(--color-ink-faint);
-  margin-top: 0.75rem;
-  flex-wrap: wrap;
 }
 
 .page-hero {
@@ -388,7 +413,7 @@ h1, h2, h3, h4 {
 
 /* Sections */
 section {
-  padding-block: 4.5rem;
+  padding-block: 6rem;
 }
 
 section.rule-top {
@@ -435,7 +460,7 @@ h2.section-title {
   grid-template-columns: 3.5rem 1fr auto;
   align-items: center;
   gap: 1.5rem;
-  padding-block: 1.75rem;
+  padding-block: 2.5rem;
   border-bottom: 1px solid var(--color-line);
   text-decoration: none;
   color: var(--color-ink);
@@ -459,8 +484,8 @@ h2.section-title {
 .service-row .title-group h3 {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
-  margin-bottom: 0.35rem;
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  margin-bottom: 0.5rem;
 }
 
 .service-row .title-group p {
