@@ -10,8 +10,8 @@
   --color-ink: #0f121a;
   --color-ink-soft: #4b5163;
   --color-ink-faint: #868da0;
-  --color-accent: #3341e0;
-  --color-accent-soft: #6672f0;
+  --color-accent: #0a9f8b;
+  --color-accent-soft: #4dbfae;
   --color-line: rgba(15, 18, 26, 0.1);
   --color-line-strong: rgba(15, 18, 26, 0.2);
   --color-invert-bg: #0f121a;
@@ -136,25 +136,24 @@ h1, h2, h3, h4 {
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
-  color: var(--color-ink);
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.15rem;
   text-decoration: none;
   white-space: nowrap;
 }
 
 .brand:hover,
 .brand:focus-visible {
-  color: var(--color-ink);
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
-.brand img {
-  width: 30px;
-  height: 30px;
-  border-radius: 8px;
+.brand-logo {
+  height: 34px;
+  width: auto;
+}
+
+.footer-logo {
+  height: 38px;
+  width: auto;
+  margin-bottom: 1rem;
 }
 
 .nav-toggle {
@@ -988,12 +987,6 @@ form.contact-form {
 
 @media (max-width: 760px) {
   .footer-top { grid-template-columns: 1fr; gap: 2.25rem; }
-}
-
-.footer-brand {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  color: var(--color-invert-text);
 }
 
 .footer-brand-note {

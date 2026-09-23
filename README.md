@@ -16,8 +16,16 @@ det Digitalbolaget som pratar ("vi").
 (rubriker) + [Inter](https://fonts.google.com/specimen/Inter)
 (brödtext) + [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono)
 (eyebrows, tjänsteindex, taggar), laddade via Google Fonts i varje
-sidas `<head>`. Färgtokens och komponenter (tjänstelista, case-kort,
-capabilities-taggar, mörk footer) definieras i `assets/css/style.css`.
+sidas `<head>`. Accentfärgen (`--color-accent`, teal) är hämtad direkt
+från den riktiga Digitalbolaget-loggan. Färgtokens och komponenter
+(tjänstelista, case-kort, capabilities-taggar, mörk footer) definieras
+i `assets/css/style.css`.
+
+**Logga:** `assets/img/logo.png` (färgversion, används i headern mot
+ljus bakgrund) och `assets/img/logo-white.png` (vit/omvänd version,
+används i den mörka footern). `assets/img/favicon.png` är loggans
+ikonmärke friläggt till en kvadrat. Byt ut alla tre om loggan
+uppdateras — ingen kodändring behövs så länge filnamnen är desamma.
 
 ## Struktur
 
@@ -40,7 +48,7 @@ kunder/
 assets/
   css/style.css                All styling, en fil
   js/main.js                   Mobilmeny, kontaktformulär, magnetiska knappar, case-filter
-  img/                         Favicon (SVG), OG-bild, drönarfoto och foto-platshållare
+  img/                         Logga (färg + vit), favicon, OG-bild, drönarfoto och foto-platshållare
 robots.txt
 sitemap.xml
 CNAME                          Custom domain för GitHub Pages (ta bort om du inte kör Pages)
