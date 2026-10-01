@@ -371,6 +371,7 @@ h1, h2, h3, h4 {
 
 .hero-image img {
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   display: block;
