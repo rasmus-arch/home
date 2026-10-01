@@ -89,6 +89,18 @@ en sajt med fyra tomma case i flera veckor ger fel intryck.
    `<article class="case-card">`-block, ge det ett unikt `id`/`data-category`
    och lägg till en matchande `data-filter`-knapp om det är en ny kategori.
 
+## Kundlogotyper (startsidan, sektionen "Företag vi har byggt åt")
+
+Varje kund har en `<div class="logo-tile">` i `index.html` med en
+platshållare (`Logga tillkommer`). Så byter du ut den mot en riktig logga:
+1. Lägg loggfilen i `assets/img/`, helst en PNG med transparent bakgrund.
+2. Byt `<div class="logo-placeholder">...</div>` mot
+   `<div class="logo-placeholder has-image"><img src="assets/img/din-logga.png" alt="Kundnamn"></div>`.
+3. Loggan visas i gråskala och blir färgad vid hover/fokus – ingen
+   kodändring behövs för det.
+4. Fler kunder? Kopiera en hel `<div class="logo-tile">` och lägg till
+   i `.logo-grid`.
+
 ## Innan sajten går skarpt – checklista
 
 1. **Kontaktformulär – Web3Forms.** ✅ Klart. Formuläret på `kontakt.html`

@@ -573,6 +573,67 @@ h2.section-title {
   grid-template-columns: 1fr auto;
 }
 
+/* Logo gallery */
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+  gap: 1.5rem;
+}
+
+.logo-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.logo-placeholder {
+  aspect-ratio: 3 / 2;
+  border: 1.5px dashed var(--color-line-strong);
+  border-radius: var(--radius);
+  background: var(--color-bg-alt);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--color-ink-faint);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.logo-placeholder svg {
+  width: 24px;
+  height: 24px;
+  color: var(--color-ink-faint);
+}
+
+.logo-placeholder.has-image {
+  border-style: solid;
+  border-color: var(--color-line);
+  padding: 1.5rem;
+}
+
+.logo-placeholder img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.7;
+  transition: filter 0.2s ease, opacity 0.2s ease;
+}
+
+.logo-tile:hover .logo-placeholder img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.logo-name {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  text-align: center;
+}
+
 /* Process */
 .process-grid {
   display: grid;
