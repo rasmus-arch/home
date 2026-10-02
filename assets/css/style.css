@@ -9,8 +9,8 @@
   --color-bg-alt: #f1f1ee;
   --color-ink: #18181b;
   --color-ink-soft: #52525b;
-  --color-ink-faint: #8a8a94;
-  --color-accent: #0a9f8b;
+  --color-ink-faint: #65656d;
+  --color-accent: #067567;
   --color-accent-soft: #4dbfae;
   --color-line: rgba(24, 24, 27, 0.1);
   --color-line-strong: rgba(24, 24, 27, 0.18);
@@ -96,6 +96,19 @@ h1, h2, h3, h4 {
 
 .eyebrow::after {
   content: " ]";
+}
+
+/* Visually hidden (screen-reader only) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Skip link */
@@ -1233,7 +1246,7 @@ form.contact-form {
   color: rgba(251, 251, 253, 0.6);
 }
 
-.footer-col h4 {
+.footer-col h3 {
   font-size: 0.78rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
