@@ -90,14 +90,6 @@ h1, h2, h3, h4 {
   color: var(--color-accent);
 }
 
-.eyebrow::before {
-  content: "[ ";
-}
-
-.eyebrow::after {
-  content: " ]";
-}
-
 /* Visually hidden (screen-reader only) */
 .sr-only {
   position: absolute;
@@ -353,7 +345,7 @@ h1, h2, h3, h4 {
 
 .hero h1 {
   font-size: clamp(2.6rem, 6vw, 4.6rem);
-  margin: 1.1rem 0 1.5rem;
+  margin: 0 0 1.5rem;
   max-width: 16ch;
 }
 
@@ -462,7 +454,7 @@ section.bg-raised {
 
 h2.section-title {
   font-size: clamp(1.8rem, 3.2vw, 2.5rem);
-  margin: 0.6rem 0 1rem;
+  margin: 0 0 1rem;
   max-width: 24ch;
 }
 
