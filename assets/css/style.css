@@ -824,6 +824,29 @@ h2.section-title {
   transform: scale(1.06);
 }
 
+.case-media.is-logo {
+  background: #fff;
+}
+
+.case-media.is-logo img {
+  object-fit: contain;
+  padding: 18%;
+}
+
+.case-note {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 2;
+  background: rgba(15, 15, 17, 0.78);
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.3rem 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+}
+
 .case-media-empty {
   color: var(--color-ink-faint);
   font-size: 0.9rem;
