@@ -34,6 +34,7 @@ index.html                     Startsida: hero, tjänstelista, capabilities, cas
 webbyra-eskilstuna.html        SEO-landningssida: "webbyrå eskilstuna"
 hemsida-eskilstuna.html        SEO-landningssida: "hemsida eskilstuna"
 case.html                      Case studies (Hemsidor / Annonsering / Konsultuppdrag / Affärssystem)
+ai-kurser.html                 AI-kurser: grundkurs + fördjupning, två intresseformulär (Web3Forms)
 om.html                        Om mig
 kontakt.html                   Kontaktformulär
 tack.html                      Tacksida efter skickat formulär (noindex)

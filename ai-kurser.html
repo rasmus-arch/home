@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-65WKL1PCGL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-65WKL1PCGL');
+  </script>
+
+  <title>AI-kurser för företagare | Så utvecklar du ditt företagande med AI</title>
+  <meta name="description" content="Praktiska AI-kurser för småföretagare i Claude, ChatGPT och Gemini. Grundkurs på en timme och fördjupning på två timmar, där du bygger på ditt eget företag. Fika ingår.">
+  <link rel="canonical" href="https://rasmusgustafsson.com/ai-kurser.html">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Digitalbolaget">
+  <meta property="og:title" content="AI-kurser för företagare | Så utvecklar du ditt företagande med AI">
+  <meta property="og:description" content="Praktiska kurser för företagare i Claude, ChatGPT och Gemini. Du bygger på ditt eget företag och går hem med det.">
+  <meta property="og:url" content="https://rasmusgustafsson.com/ai-kurser.html">
+  <meta property="og:image" content="https://rasmusgustafsson.com/assets/img/og-image.png">
+  <meta property="og:locale" content="sv_SE">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Grundkurs: Så utvecklar du ditt företagande med AI",
+      "description": "En timme där du kommer hem med en egen AI-assistent, fem promptmallar och tre uppgifter att börja med nästa vecka.",
+      "url": "https://rasmusgustafsson.com/ai-kurser.html#grundkurs",
+      "inLanguage": "sv",
+      "educationalLevel": "Nybörjare",
+      "provider": { "@type": "Person", "name": "Rasmus Gustafsson", "url": "https://rasmusgustafsson.com/" },
+      "offers": {
+        "@type": "Offer",
+        "category": "Paid",
+        "price": "995.00",
+        "priceCurrency": "SEK",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "995.00",
+          "priceCurrency": "SEK",
+          "valueAddedTaxIncluded": false
+        }
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseWorkload": "PT1H",
+        "instructor": { "@type": "Person", "name": "Rasmus Gustafsson" }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Fördjupningskurs: Gemini, ChatGPT och Claude i praktiken",
+      "description": "Två timmar där du bygger riktiga arbetsflöden på ditt eget företag: inkorgsskanning, veckosummering och digitala assistenter.",
+      "url": "https://rasmusgustafsson.com/ai-kurser.html#fordjupning",
+      "inLanguage": "sv",
+      "educationalLevel": "Fortsättning",
+      "coursePrerequisites": "Grundkursen eller motsvarande vana av att använda AI",
+      "provider": { "@type": "Person", "name": "Rasmus Gustafsson", "url": "https://rasmusgustafsson.com/" },
+      "offers": {
+        "@type": "Offer",
+        "category": "Paid",
+        "price": "2499.00",
+        "priceCurrency": "SEK",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "2499.00",
+          "priceCurrency": "SEK",
+          "valueAddedTaxIncluded": false
+        }
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseWorkload": "PT2H",
+        "instructor": { "@type": "Person", "name": "Rasmus Gustafsson" }
+      }
+    }
+  ]
+  </script>
+  <!-- Frågorna med platshållare (verktygskostnad, paketpris, avbokning) läggs till här när de är ifyllda. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Behöver jag kunna något i förväg?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nej, inte till grundkursen. Fördjupningen bygger på grundkursen eller motsvarande vana av att använda AI." }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad behöver jag ta med?",
+        "acceptedAnswer": { "@type": "Answer", "text": "En dator. Till grundkursen fungerar det också med mobilen. Logga in i minst ett av verktygen innan kursen, och ta gärna med exempel från ditt företag." }
+      },
+      {
+        "@type": "Question",
+        "name": "Är det säkert att använda AI med kunduppgifter?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Vi går igenom tre enkla regler och hur du kollar inställningarna för datadelning i verktygen. Det här är inte juridisk rådgivning." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo.png" alt="Digitalbolaget" class="brand-logo"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Öppna meny">
+        <span class="hamburger" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Huvudmeny">
+        <ul>
+          <li><a href="index.html">Hem</a></li>
+          <li><a href="index.html#tjanster">Tjänster</a></li>
+          <li><a href="case.html">Case</a></li>
+          <li><a href="ai-kurser.html" aria-current="page">AI-kurser</a></li>
+          <li><a href="om.html">Om mig</a></li>
+          <li><a href="kontakt.html" class="btn btn-outline">Starta ett projekt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumbs"><a href="index.html">Hem</a> / AI-kurser</p>
+        <h1>Så utvecklar du ditt företagande med AI</h1>
+        <p class="section-lead">
+          Praktiska kurser för företagare i Claude, ChatGPT och Gemini. Du bygger på ditt eget
+          företag och går hem med det.
+        </p>
+        <div class="hero-actions" style="margin-top:1.75rem;">
+          <a class="btn btn-primary" href="#grundkurs">Grundkurs <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-outline" href="#fordjupning">Fördjupning <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="kursledare-rubrik">
+      <div class="container course-leader">
+        <img src="assets/img/rasmus-kursledare.jpg" alt="Rasmus Gustafsson, kursledare" width="546" height="683" loading="lazy">
+        <div>
+          <h2 class="section-title" id="kursledare-rubrik">Om kursledaren</h2>
+          <p>
+            Kurserna hålls av Rasmus Gustafsson. Han har jobbat i köksbranschen sedan 2022, först på
+            Närkekök AB som säljare, digital marknadschef och säljchef fram till 2026. Under 2025 och
+            2026 hade han också ansvar för marknadsföring, försäljning och företagsutveckling på
+            Klarälvskök.
+          </p>
+          <p>
+            Sedan september 2026 driver han Näshultakök &amp; Digitalbolaget, där han säljer kök och
+            bygger digitala lösningar och system åt andra företag. Han bygger egna affärssystem och
+            använder AI i det egna företaget varje dag. Det som visas på kurserna är sådant han
+            själv använder.
+          </p>
+          <p class="course-aside">Utanför jobbet är han hundägare och gillar jakt, fiske och bilar.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rule-top bg-raised" id="grundkurs" aria-labelledby="grundkurs-rubrik">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="grundkurs-rubrik">Grundkurs: Så utvecklar du ditt företagande med AI</h2>
+          <p class="section-lead">
+            En timme där du kommer hem med en egen AI-assistent, fem promptmallar och tre uppgifter
+            att börja med nästa vecka.
+          </p>
+          <ul class="tag-list course-facts" aria-label="Fakta om grundkursen">
+            <li>1 timme</li>
+            <li>Hands-on</li>
+            <li>Fika ingår</li>
+            <li>995 kr ex moms</li>
+          </ul>
+        </div>
+
+        <div class="course-body">
+          <div>
+            <h3>För vem</h3>
+            <p>
+              För dig som driver ett mindre företag och är ny på AI, eller har provat lite men inte
+              kommit vidare. Ta med dator eller mobil, så övar du på ditt eget företag.
+            </p>
+
+            <h3>Det här får du</h3>
+            <ul class="check-list">
+              <li>Förstå skillnaden mellan AI, maskininlärning och språkmodeller</li>
+              <li>Skriva prompts som ger bra svar, med promptformeln roll, uppgift, kontext, format och exempel</li>
+              <li>Veta vilket verktyg som passar vad: Claude, ChatGPT, Gemini och specialverktygen Perplexity, NotebookLM och Copilot</li>
+              <li>Bygga din egen AI-assistent</li>
+              <li>Skriva texter och marknadsföring i företagets egen röst</li>
+              <li>Få AI-text att låta mindre som AI, och veta vad forskningen säger om hur kunder reagerar på AI-annonser</li>
+              <li>Hitta leads och få dem som Excel-lista, med ett riktigt exempel</li>
+              <li>Se hur ett eget affärssystem kan byggas med AI</li>
+              <li>Spara tid varje vecka och använda AI säkert: GDPR, kontrollera svaren och hantera personuppgifter</li>
+            </ul>
+          </div>
+
+          <div class="contact-info course-form" id="anmalan-grundkurs">
+            <h3>Intresseanmälan grundkurs</h3>
+            <p>Datum och plats är inte bestämda än. Lämna dina uppgifter så hör vi av oss när nästa tillfälle är satt. Anmälan är inte bindande.</p>
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" data-success="Tack! Vi hör av oss när nästa grundkurs är bestämd.">
+              <input type="hidden" name="access_key" value="81ecc3c2-d82f-49a5-a433-20d8963a5dee">
+              <input type="hidden" name="subject" value="Intresseanmälan: AI-grundkurs">
+              <input type="hidden" name="from_name" value="rasmusgustafsson.com">
+              <input type="hidden" name="redirect" value="https://rasmusgustafsson.com/tack.html">
+              <input type="hidden" name="kurs" value="Grundkurs">
+
+              <div class="hp-field" aria-hidden="true">
+                <label for="gk-botcheck">Lämna detta fält tomt</label>
+                <input type="checkbox" id="gk-botcheck" name="botcheck" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="form-row">
+                <label for="gk-name">Namn *</label>
+                <input type="text" id="gk-name" name="name" autocomplete="name" required>
+              </div>
+              <div class="form-row">
+                <label for="gk-email">E-post *</label>
+                <input type="email" id="gk-email" name="email" autocomplete="email" required>
+              </div>
+              <div class="form-row">
+                <label for="gk-company">Företag</label>
+                <input type="text" id="gk-company" name="company" autocomplete="organization">
+              </div>
+              <div class="form-row">
+                <label for="gk-phone">Telefon</label>
+                <input type="tel" id="gk-phone" name="phone" autocomplete="tel">
+              </div>
+              <div class="form-row">
+                <label for="gk-message">Något du vill att vi tar upp?</label>
+                <textarea id="gk-message" name="message" rows="3"></textarea>
+              </div>
+
+              <div class="form-status" role="status" aria-live="polite"></div>
+
+              <div>
+                <button class="btn btn-primary" type="submit">Anmäl intresse <span class="arrow" aria-hidden="true">→</span></button>
+              </div>
+              <p class="form-note">Uppgifterna används bara för att kontakta dig om kursen.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rule-top" id="fordjupning" aria-labelledby="fordjupning-rubrik">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="fordjupning-rubrik">Fördjupningskurs: Gemini, ChatGPT och Claude i praktiken</h2>
+          <p class="section-lead">
+            Två timmar där du bygger riktiga arbetsflöden på ditt eget företag: inkorgsskanning,
+            veckosummering och digitala assistenter.
+          </p>
+          <ul class="tag-list course-facts" aria-label="Fakta om fördjupningskursen">
+            <li>2 timmar med paus</li>
+            <li>Hands-on</li>
+            <li>Fika ingår</li>
+            <li>2&nbsp;499&nbsp;kr ex moms</li>
+          </ul>
+        </div>
+
+        <div class="course-body">
+          <div>
+            <h3>För vem</h3>
+            <p>
+              För dig som har gått grundkursen eller redan använder AI regelbundet, och vill gå från
+              enstaka texter till att låta AI göra jobb varje vecka.
+            </p>
+
+            <h3>Det här bygger du</h3>
+            <div class="process-grid cols-3">
+              <div class="process-step">
+                <h4>Inkorgsskanning</h4>
+                <p>AI går igenom dina senaste mejl och sorterar dem i ”svara idag”, ”svara denna vecka”, ”för kännedom” och ”kan ignoreras”. Den skriver utkast i din ton. Den skickar ingenting.</p>
+              </div>
+              <div class="process-step">
+                <h4>Veckosummering</h4>
+                <p>En sida på fredagen med vad som hände, vilka beslut som fattades och vilka uppgifter som är öppna. Där står också kunder att följa upp och tre prioriteringar för nästa vecka.</p>
+              </div>
+              <div class="process-step">
+                <h4>Digitala assistenter</h4>
+                <p>En assistent med företagets egen kunskap, som prislista, vanliga frågor och villkor. Den svarar kunder eller skriver offertutkast, men bara utifrån det den har fått.</p>
+              </div>
+            </div>
+
+            <p style="margin-top:1.75rem;">
+              Vi visar också tre bonuscase: mötesanteckningar som blir uppgifter, offert direkt från
+              en förfrågan och uppföljning av leads.
+            </p>
+            <p>
+              Vi går igenom hur du sätter gränser för vad AI får läsa, så att den bara läser och
+              föreslår. Den skickar eller raderar aldrig något.
+            </p>
+            <p class="course-note">
+              Kopplingar, funktioner och abonnemang skiljer sig mellan verktygen och ändras ofta. Logga
+              därför in i minst ett av verktygen innan kursen. Kursen fungerar även utan koppling till
+              mejlen, då klistrar du in ett urval mejl i stället.
+            </p>
+          </div>
+
+          <div class="contact-info course-form" id="anmalan-fordjupning">
+            <h3>Intresseanmälan fördjupning</h3>
+            <p>Datum och plats är inte bestämda än. Lämna dina uppgifter så hör vi av oss när nästa tillfälle är satt. Anmälan är inte bindande.</p>
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" data-success="Tack! Vi hör av oss när nästa fördjupningskurs är bestämd.">
+              <input type="hidden" name="access_key" value="81ecc3c2-d82f-49a5-a433-20d8963a5dee">
+              <input type="hidden" name="subject" value="Intresseanmälan: AI-fördjupningskurs">
+              <input type="hidden" name="from_name" value="rasmusgustafsson.com">
+              <input type="hidden" name="redirect" value="https://rasmusgustafsson.com/tack.html">
+              <input type="hidden" name="kurs" value="Fördjupning">
+
+              <div class="hp-field" aria-hidden="true">
+                <label for="fd-botcheck">Lämna detta fält tomt</label>
+                <input type="checkbox" id="fd-botcheck" name="botcheck" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="form-row">
+                <label for="fd-name">Namn *</label>
+                <input type="text" id="fd-name" name="name" autocomplete="name" required>
+              </div>
+              <div class="form-row">
+                <label for="fd-email">E-post *</label>
+                <input type="email" id="fd-email" name="email" autocomplete="email" required>
+              </div>
+              <div class="form-row">
+                <label for="fd-company">Företag</label>
+                <input type="text" id="fd-company" name="company" autocomplete="organization">
+              </div>
+              <div class="form-row">
+                <label for="fd-phone">Telefon</label>
+                <input type="tel" id="fd-phone" name="phone" autocomplete="tel">
+              </div>
+              <div class="form-row">
+                <label for="fd-message">Har du gått grundkursen, eller hur använder du AI i dag?</label>
+                <textarea id="fd-message" name="message" rows="3"></textarea>
+              </div>
+
+              <div class="form-status" role="status" aria-live="polite"></div>
+
+              <div>
+                <button class="btn btn-primary" type="submit">Anmäl intresse <span class="arrow" aria-hidden="true">→</span></button>
+              </div>
+              <p class="form-note">Uppgifterna används bara för att kontakta dig om kursen.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rule-top" aria-labelledby="jamforelse-rubrik">
+      <div class="container">
+        <h2 class="section-title" id="jamforelse-rubrik">Grundkurs eller fördjupning?</h2>
+        <table class="compare-table" style="margin-top:1.5rem;">
+          <caption class="sr-only">Jämförelse mellan grundkursen och fördjupningskursen</caption>
+          <thead>
+            <tr>
+              <td></td>
+              <th scope="col">Grundkurs</th>
+              <th scope="col">Fördjupning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Längd</th>
+              <td>1 timme, hands-on</td>
+              <td>2 timmar med paus, hands-on</td>
+            </tr>
+            <tr>
+              <th scope="row">Pris</th>
+              <td>995&nbsp;kr ex moms</td>
+              <td>2&nbsp;499&nbsp;kr ex moms</td>
+            </tr>
+            <tr>
+              <th scope="row">Nivå</th>
+              <td>Nybörjare</td>
+              <td>Fortsättning</td>
+            </tr>
+            <tr>
+              <th scope="row">Du bygger</th>
+              <td>En egen AI-assistent, fem promptmallar och tre uppgifter att börja med</td>
+              <td>Inkorgsskanning, veckosummering och en digital assistent</td>
+            </tr>
+            <tr>
+              <th scope="row">För vem</th>
+              <td>Småföretagare som är nya på AI eller har provat lite</td>
+              <td>Företagare som gått grundkursen eller redan använder AI regelbundet</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="form-note" style="margin-top:0.85rem;">Priserna är exklusive moms (inkl moms: 1&nbsp;243,75&nbsp;kr / 3&nbsp;123,75&nbsp;kr). Fika ingår i båda kurserna.</p>
+      </div>
+    </section>
+
+    <section class="rule-top" aria-labelledby="fragor-rubrik">
+      <div class="container">
+        <h2 class="section-title" id="fragor-rubrik">Vanliga frågor</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Behöver jag kunna något i förväg?</summary>
+            <p>Nej, inte till grundkursen. Fördjupningen bygger på grundkursen eller motsvarande vana av att använda AI.</p>
+          </details>
+          <details>
+            <summary>Vad behöver jag ta med?</summary>
+            <p>En dator. Till grundkursen fungerar det också med mobilen. Logga in i minst ett av verktygen innan kursen, och ta gärna med exempel från ditt företag.</p>
+          </details>
+          <details>
+            <summary>Måste jag betala för något av verktygen?</summary>
+            <p>[fyll i efter att jag testat vilka planer som krävs]</p>
+          </details>
+          <details>
+            <summary>Är det säkert att använda AI med kunduppgifter?</summary>
+            <p>Vi går igenom tre enkla regler och hur du kollar inställningarna för datadelning i verktygen. Det här är inte juridisk rådgivning.</p>
+          </details>
+          <details>
+            <summary>Kan jag boka både grundkurs och fördjupning?</summary>
+            <p>[paketpris eller ej]</p>
+          </details>
+          <details>
+            <summary>Vad gäller om jag behöver avboka?</summary>
+            <p>[avbokningsregel]</p>
+          </details>
+        </div>
+
+        <div class="cta-band" style="margin-top:3.5rem;">
+          <h2>Vill du vara med nästa gång?</h2>
+          <p>Anmäl intresse till den kurs som passar dig, så hör vi av oss när datum och plats är bestämda.</p>
+          <div class="hero-actions">
+            <a class="btn btn-invert" href="#anmalan-grundkurs">Grundkurs <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-invert" href="#anmalan-fordjupning">Fördjupning <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+          <p class="cta-contact">Mejl: [mejl] · Telefon: [telefon]</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <img src="assets/img/logo-white.png" alt="Digitalbolaget" class="footer-logo">
+          <p class="footer-brand-note">
+            Digitalisering, webb, sälj och rådgivning i Eskilstuna — en kontaktyta för flera av dina behov.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>Tjänster</h3>
+          <ul>
+            <li><a href="tjanster/digitalisering.html">Digitalisering</a></li>
+            <li><a href="tjanster/webb-och-kodning.html">Webb &amp; kodning</a></li>
+            <li><a href="tjanster/annonsering.html">Annonsering</a></li>
+            <li><a href="tjanster/tjanstebil.html">Tjänstebil</a></li>
+            <li><a href="tjanster/kok.html">Kök</a></li>
+            <li><a href="tjanster/dronarfoto.html">Drönarfoto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Sajt</h3>
+          <ul>
+            <li><a href="webbyra-eskilstuna.html">Webbyrå Eskilstuna</a></li>
+            <li><a href="hemsida-eskilstuna.html">Hemsida Eskilstuna</a></li>
+            <li><a href="om.html">Om mig</a></li>
+            <li><a href="case.html">Case</a></li>
+            <li><a href="ai-kurser.html">AI-kurser</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Digitalbolaget</span>
+        <a href="#top">Till toppen ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

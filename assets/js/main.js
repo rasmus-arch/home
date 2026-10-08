@@ -62,78 +62,79 @@
     });
   }
 
-  // Contact form: Web3Forms submission with honeypot + minimum-time spam checks.
-  var form = document.querySelector(".contact-form");
-  if (!form) return;
+  // Contact forms: Web3Forms submission with honeypot + minimum-time spam checks.
+  // Handles every .contact-form on the page; data-success sets a custom thank-you message.
+  document.querySelectorAll(".contact-form").forEach(function (form) {
+    var renderedAt = Date.now();
+    var statusEl = form.querySelector(".form-status");
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var successMessage = form.dataset.success || "Tack för ditt meddelande! Jag återkommer så snart jag kan.";
 
-  var renderedAt = Date.now();
-  var statusEl = form.querySelector(".form-status");
-  var submitBtn = form.querySelector('button[type="submit"]');
+    function showStatus(kind, message) {
+      if (!statusEl) return;
+      statusEl.textContent = message;
+      statusEl.className = "form-status is-visible " + kind;
+    }
 
-  function showStatus(kind, message) {
-    if (!statusEl) return;
-    statusEl.textContent = message;
-    statusEl.className = "form-status is-visible " + kind;
-  }
+    form.addEventListener("submit", function (event) {
+      var honeypot = form.querySelector('input[name="botcheck"]');
+      if (honeypot && honeypot.checked) {
+        event.preventDefault();
+        showStatus("success", successMessage);
+        form.reset();
+        return;
+      }
 
-  form.addEventListener("submit", function (event) {
-    var honeypot = form.querySelector('input[name="botcheck"]');
-    if (honeypot && honeypot.checked) {
+      var elapsed = Date.now() - renderedAt;
+      if (elapsed < 2500) {
+        event.preventDefault();
+        showStatus("error", "Formuläret skickades in väldigt snabbt — vänta ett par sekunder och försök igen.");
+        return;
+      }
+
       event.preventDefault();
-      showStatus("success", "Tack för ditt meddelande! Jag återkommer så snart jag kan.");
-      form.reset();
-      return;
-    }
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.dataset.originalHtml = submitBtn.innerHTML;
+        submitBtn.textContent = "Skickar...";
+      }
 
-    var elapsed = Date.now() - renderedAt;
-    if (elapsed < 2500) {
-      event.preventDefault();
-      showStatus("error", "Formuläret skickades in väldigt snabbt — vänta ett par sekunder och försök igen.");
-      return;
-    }
+      var formData = new FormData(form);
 
-    event.preventDefault();
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.dataset.originalText = submitBtn.textContent;
-      submitBtn.textContent = "Skickar...";
-    }
-
-    var formData = new FormData(form);
-
-    fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: { Accept: "application/json" }
-    })
-      .then(function (response) {
-        return response.json().catch(function () {
-          return { success: response.ok };
-        });
+      fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" }
       })
-      .then(function (data) {
-        if (data && data.success) {
-          showStatus("success", "Tack för ditt meddelande! Jag återkommer så snart jag kan.");
-          form.reset();
-          renderedAt = Date.now();
-        } else {
+        .then(function (response) {
+          return response.json().catch(function () {
+            return { success: response.ok };
+          });
+        })
+        .then(function (data) {
+          if (data && data.success) {
+            showStatus("success", successMessage);
+            form.reset();
+            renderedAt = Date.now();
+          } else {
+            showStatus(
+              "error",
+              "Något gick fel när meddelandet skulle skickas. Försök gärna igen om en stund."
+            );
+          }
+        })
+        .catch(function () {
           showStatus(
             "error",
             "Något gick fel när meddelandet skulle skickas. Försök gärna igen om en stund."
           );
-        }
-      })
-      .catch(function () {
-        showStatus(
-          "error",
-          "Något gick fel när meddelandet skulle skickas. Försök gärna igen om en stund."
-        );
-      })
-      .finally(function () {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.textContent = submitBtn.dataset.originalText || "Skicka meddelande";
-        }
-      });
+        })
+        .finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = submitBtn.dataset.originalHtml || "Skicka meddelande";
+          }
+        });
+    });
   });
 })();
