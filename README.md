@@ -123,15 +123,10 @@ platshållare (`Logga tillkommer`). Så byter du ut den mot en riktig logga:
    - `om.html` har en allmän text om dig – fyll gärna på med bakgrund,
      tidigare uppdrag eller specifika samarbeten (t.ex. vilket
      kökssortiment du representerar) om du vill vara mer specifik.
-   - `assets/img/rasmus-foto.jpg` är just nu en platshållarbild (ett
-     genererat "foto kommer"-kort) för fotot på Om mig-sidan. Bilden
-     visas liggande, beskuren till formatet 3:2 (`object-fit: cover`,
-     så exakta pixelmått spelar mindre roll så länge bilden är
-     liggande/bred). Ersätt filen med ditt riktiga foto – **samma
-     filnamn** – så behövs ingen kodändring. Du kan antingen committa
-     den nya filen till repot, eller ladda upp den direkt till samma
-     sökväg på webbhotellet om du inte kör om
-     hela sajten via git.
+   - `assets/img/rasmus-foto.jpg` är fotot på Om mig-sidan (liggande,
+     visas beskuret till 3:2). Samma foto finns som stående porträtt i
+     `assets/img/rasmus-kursledare.jpg` på `ai-kurser.html`. Vill du byta
+     bild räcker det att ersätta filerna med samma filnamn.
    - Telefonnummer visas inte längre offentligt någonstans på sajten –
      all kontakt går via formuläret på `kontakt.html`. Vill du visa ett
      nummer igen senare, sök efter `tel:` i `.html`-filerna för att se
