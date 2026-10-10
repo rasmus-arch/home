@@ -1,7 +1,7 @@
-# rasmusgustafsson.com — Digitalbolaget
+# digitalbolaget.se — Digitalbolaget
 
 Statisk, beroendefri sajt (ren HTML/CSS/JS, inget byggsteg) på domänen
-rasmusgustafsson.com för **Digitalbolaget**, som drivs av Rasmus
+digitalbolaget.se för **Digitalbolaget**, som drivs av Rasmus
 Gustafsson i Eskilstuna. Täcker digitalisering, webbutveckling &
 kundanpassade säljsystem, annonsering, tjänstebilsrådgivning,
 köksförsäljning och drönarfoto.
@@ -112,8 +112,12 @@ platshållare (`Logga tillkommer`). Så byter du ut den mot en riktig logga:
 
 2. **Domän / hosting.**
    - **GitHub Pages:** aktivera Pages på detta repo (Settings → Pages →
-     Deploy from branch), peka DNS för rasmusgustafsson.com mot GitHub
+     Deploy from branch), peka DNS för digitalbolaget.se mot GitHub
      Pages enligt deras guide. `CNAME`-filen i repot är redan förifylld.
+   - **Flytt från rasmusgustafsson.com (oktober 2026):** sajten bytte
+     domän till digitalbolaget.se (utan www). Den gamla domänen ska
+     301-omdirigera varje adress till samma sökväg på den nya, och
+     adressändringen anmäls i Google Search Console.
    - **Vanligt webbhotell:** ladda upp alla filer i repots rot till
      dokumentroten via FTP/SFTP eller kontrollpanelens filhanterare. Om
      du inte använder GitHub Pages kan `CNAME`-filen tas bort (den gör
@@ -158,7 +162,7 @@ så här:
    för nya kunder) och byt ut `REPLACE_WITH_LOOKER_STUDIO_EMBED_URL`
    mot embed-URL:en i `<iframe src="...">`.
 6. Skicka den unika sid-länken (t.ex.
-   `https://rasmusgustafsson.com/kunder/proarb.html`) direkt till
+   `https://digitalbolaget.se/kunder/proarb.html`) direkt till
    kunden – dela den inte offentligt.
 
 **Ny kund:** duplicera `kunder/proarb.html`, uppdatera titel, rubriker

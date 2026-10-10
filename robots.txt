@@ -3,4 +3,4 @@ Allow: /
 Disallow: /tack.html
 Disallow: /kunder/
 
-Sitemap: https://rasmusgustafsson.com/sitemap.xml
+Sitemap: https://digitalbolaget.se/sitemap.xml
